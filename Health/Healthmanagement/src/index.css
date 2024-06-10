@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  font-size: 3rem;
+  margin: auto;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.mapcontainer{
+    width: 985px !important;
+    height: 635px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin-top: 118px !important;
+    margin-left: 140px !important;
+}

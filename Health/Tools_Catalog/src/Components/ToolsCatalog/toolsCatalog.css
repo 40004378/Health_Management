@@ -1,0 +1,187 @@
+/* .MuiTypography-paragraph{
+    /* margin-left: 132px !important; */
+/* } */
+ 
+/* .MuiTypography-body1{ */
+    /* float: left !important; */
+/* }  */
+ 
+.main-page {
+    flex:1;
+    margin-left: 35px;
+    background-color: rgb(228 228 247);
+ 
+}
+ 
+.search-container{
+/* padding-top: 30px !important; */
+margin-top: 20px !important;
+display: block;
+justify-content: center;
+/* position: static; */
+margin-left: 264px;
+
+}
+ 
+.search{
+    width: 816px;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 21px;     
+    background-color: white;
+    font-size: 17px !important;
+}
+ 
+.searchicon{
+position: absolute;
+    left: 440px;
+    margin-top: 8px;
+    display: flex;
+    transform: translateY(-50%);
+}
+ 
+.tabs-and-dropdown {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 120px;
+
+   }
+  
+   .tabs {
+    display: flex;
+    text-wrap: nowrap;
+   }
+   .tabs button {
+    margin: 0 3px;
+    padding: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #767676;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 12px;
+   }
+   .dropdown select {
+    padding: 3px;
+    border-radius: 10px;
+    width: 118px;
+ 
+   }
+ 
+   .dropdown{
+    margin-left: 33px;
+   }
+ 
+   .dropregion{
+    display: flex;
+    margin-left: 0px;
+    align-items: center;
+    gap: 6px;
+   }
+ 
+   .card-container {
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 20px;
+    margin-left: 99px;
+ 
+   }
+   .card {
+    width: 228px; /* Set width of each card */
+    height: 270px; /* Set height of each card */
+    /* border: 1px solid #ccc; */
+    /* margin: 0 10px; Adjust margin between cards */
+    border-radius: 9px;
+    /* margin: 1px -12px 0px 28px; */
+    /* margin-bottom: 20px; */
+    cursor: pointer;
+
+   }
+   
+   .card img {
+    width: 100%; /* Make image fill the card */
+    height: 50%; /* Set height of image */
+    object-fit: cover; /* Maintain aspect ratio */
+   }
+   .card-data {
+    padding: 7px;
+    font-size: 13px;
+    color: #63659d;
+   }
+ 
+   .p{
+    color:black
+   }
+ 
+   .row1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+   }
+ 
+   .dropdown-menu {
+    position: absolute;
+    top: 175px;
+    width: 618px;
+    left: 348px;
+    right: 0;
+    background: rgb(165, 158, 158);
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    border-radius: 14px;
+   }
+   .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+   }
+   .dropdown-item:hover {
+    background: #f0f0f0;
+   }
+
+   .SelectedCard{
+    width: 276px;
+    height: 356px;
+    border: 1px solid #ccc;
+    margin: 15px 10px;
+    border-radius: 9px;
+    margin-left: 120px;
+   }
+   
+   .SelectedCard img {
+    width: 100%; /* Make image fill the card */
+    height: 50%; /* Set height of image */
+    object-fit: cover; /* Maintain aspect ratio */
+   }
+   .SelectedCard-data {
+    padding: 7px;
+   }
+ .main-card-div{
+    border: 1px solid white;
+    padding: 15px;
+    margin: 10px 10px;
+    border-radius: 7px;
+    background-color: white;
+ }
+ .main-card-div:hover {
+    border: 2px solid rgb(24, 59, 175);
+ }
+ .region-text{
+    font-size: 13px;
+    color:grey;
+ }
+ 
+ .css-bz5ng3-MuiInputBase-root-MuiInput-root::before{
+    content:none !important;
+ }
+ .css-bz5ng3-MuiInputBase-root-MuiInput-root::after{
+    content:none !important;
+ }
+ .css-1x51dt5-MuiInputBase-input-MuiInput-input{
+    font-size:20px !important
+ }

@@ -1,0 +1,34 @@
+.main-pagedashboard {
+    padding-top: 71px;
+    margin-left: 23px !important;
+}
+
+.search-containerdashboard{
+margin-top: 20px !important;
+display: flex;
+justify-content: center !important;
+padding-left: 18rem;
+    height: 138px;
+    background-color: #3f58b5e6;
+    width: 92%;
+    margin-left: 40px;
+    border-radius: 12px;
+
+}
+
+.searchdashboard{
+    width: 619px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 18px;
+    margin-top: 49px;
+    font-size: 16px !important;
+}
+
+.searchicondashboard{
+position: absolute;
+    left: 440px;
+    margin-top: 8px;
+    display: flex;
+    transform: translateY(-50%);
+}

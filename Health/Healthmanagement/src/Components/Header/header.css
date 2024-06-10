@@ -1,0 +1,34 @@
+
+
+.MuiAppBar-root{
+    height: 55px !important;
+}
+
+.MuiPaper-elevation4{
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: none !important;
+}
+.MuiAppBar-colorPrimary {
+    color: black !important ;
+    background-color: #fff !important;
+}
+
+.MuiTypography-h4{
+    margin-left: 8px !important;
+}
+
+.MuiTypography-h6{
+    margin-left: 8px !important;
+}
+h4{
+    font-size:23px;
+    color:#df0707;
+    font-weight:800;
+    margin-top: 10px;
+    font-family: 'Georgia Pro',sans-serif;
+}
+.h6{
+    font-size: 16px;
+    margin-top: 2px;
+    
+}
