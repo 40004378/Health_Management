@@ -1,0 +1,21 @@
+.app-container{
+  display: flex;
+  flex-direction: column;
+  height:100vh;
+  /* background-color: rgb(197, 211, 211); */
+}
+
+.content-container{
+  /* display: flex; */
+  flex: 1;
+  background-color: rgb(197, 211, 211);
+}
+
+.mapcontainer{
+  width: 985px !important;
+  height: 635px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  margin-top: 118px !important;
+  margin-left: 140px !important;
+}

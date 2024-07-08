@@ -1,0 +1,156 @@
+@media screen and (min-width: 1024px) {
+    .main-pagedetails {
+        flex:1; 
+        margin-left: 5%;
+    
+    }
+    
+    .search-containerdetails{
+    margin-top: 20px !important;
+    display: flex;
+    justify-content: center;
+    
+    }
+    
+    .searchdetails {
+        width: 721px;
+        height: 35px;
+        border: 1px solid black;
+        border-radius: 18px;
+    }
+    
+    .searchicondetails {
+    position: absolute;
+        /* left: 581px; */
+        margin-top: 22px;
+        height: 8px;
+        display: flex;
+    }
+    
+    .cardWidth {
+        width: 250;
+        height: 250;
+    
+    }
+    .cardStyle{
+        padding-left: 130px;
+        margin-top: 100px;
+       
+    
+    }
+    .cardPosition {
+        margin-left: 100px;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .titleOne {
+        padding-left: 30px;
+        /* margin-inline-end: 200px; */
+    }
+    
+    /* .css-gm7pcc-MuiPaper-root-MuiCard-root{
+        height: 238px !important;
+    } */
+    
+    .css-2cjn8j-MuiCardMedia-root{
+        height: 208px !important;
+    }
+    .textStyle{
+        display: flex;
+        direction: row;
+    }
+    .fontStyle {
+        padding-top: 5px;
+        margin-left: 100px;  
+        
+    }
+    
+    .title1Style  {
+        font-family: "sans-serif";
+        font-weight: "bold";
+        font-size: "18px";
+        color: red;
+        
+    }
+    .iconStyle {
+        font-size: x-large;
+    }
+    .title2Style {
+        font-family: "sans-serif";
+        font-weight: "bold";
+        font-size: "18px";
+    }
+    .select {
+        padding: 3px;
+        width: 232px;
+        height: 45px;
+        margin-top: -8px;
+        border-radius: 0px 21px 21px 0px !important;  
+        border:0.5px solid black;
+        background-color: White;
+        
+       
+    }   
+    .dropdowndetails{
+        display: flex;
+        margin-left:407px;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .dropdowndetails select {
+        padding: 3px;
+        border: none;
+        width: 100px;
+        margin-left: 147px;
+       }
+    
+       .dropregiondetails{
+        display: flex;
+        margin-left:278px;
+        align-items: center;
+        gap: 6px;
+       }
+    
+       .dropdown-menu-data{
+        position: absolute;
+        top: 175px;
+        width: 618px;
+        left: 484px;
+        right: 0;
+        background: rgba(248, 248, 248, 0.904);
+        border: 1px solid #ddd;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 10;
+        border-radius: 14px;
+       }
+       .details-card{
+        display: flex;
+       }
+    
+       .details-typo{
+        font-size:16px;
+        color:#89899b;
+        font-weight: 400;
+        font-family: sans-serif;
+        
+    }
+    .details-typo2{
+        font-size:16px;
+        margin-left:180px;
+        margin-inline-end: 34px;
+        color:#89899b;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
+    .input-div{
+        border: 1px solid black;
+        border-radius: 21px 0px 0px 21px;
+        width: 584px;
+        background-color: white;
+        display: inline-block;
+        height:43px;
+    }
+    
+}

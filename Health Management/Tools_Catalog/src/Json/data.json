@@ -1,0 +1,175 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "type": "input",
+      "sourcePosition": "right",
+      "data": {
+        "label": "Insulted at which Suppliers"
+
+      },
+      "position": {
+        "x": 60,
+        "y": 250
+      }
+    },
+    {
+      "id": "2",
+      "targetPosition": "left",
+      "sourcePosition": "right",
+      "data": {
+        "label": "Americas",
+        "condition":"place"
+      },
+      "position": {
+        "x": 400,
+        "y": 80
+      }
+    },
+    {
+      "id": "3",
+      "targetPosition": "left",
+      "sourcePosition": "right",
+      "data": {
+        "label": "APAC",
+        "condition": "place"
+      },
+      "position": {
+        "x": 400,
+        "y": 250
+      }
+    },
+    {
+      "id": "4",
+      "targetPosition": "left",
+      "sourcePosition": "right",
+      "position": {
+        "x": 400,
+        "y": 450
+      },
+      "data": {
+        "label": "EMEA",
+        "condition": "place"
+      }
+    },
+    {
+      "id": "5",
+      "targetPosition": "left",
+      "position": {
+        "x": 800,
+        "y": 20
+      },
+      "data": {
+        "label": "Supplier A | Condition= Good ",
+        "condition": "good"
+      }
+    },
+    {
+      "id": "6",
+      "targetPosition": "left",
+      "position": {
+        "x": 800,
+        "y": 130
+      },
+      "data": {
+        "label": "Supplier B | Condition= Good",
+        "condition": "good"
+      }
+    },
+    {
+      "id": "7",
+      "targetPosition": "left",
+      "position": {
+        "x": 800,
+        "y": 210
+      },
+      "data": {
+        "label": "Supplier C | Condition= Good",
+        "condition": "good"
+      }
+    },
+    {
+      "id": "8",
+      "targetPosition": "left",
+      "position": {
+        "x": 800,
+        "y": 300
+      },
+      "data": {
+        "label": "Supplier D | Condition= Good",
+        "condition": "good"
+      }
+    },
+    {
+      "id": "9",
+      "targetPosition": "left",
+      "position": {
+        "x": 800,
+        "y": 400
+      },
+      "data": {
+        "label": "Supplier M | Condition= Poor",
+        "condition": "poor"
+      }
+    },
+    {
+      "id": "10",
+      "targetPosition": "left",
+      "position": {
+        "x": 800,
+        "y": 490
+      },
+      "data": {
+        "label": "Supplier E | Condition= Good",
+        "condition": "good"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1-2",
+      "source": "1",
+      "target": "2"
+    },
+    {
+      "id": "e1-3",
+      "source": "1",
+      "target": "3"
+    },
+    {
+      "id": "e1-4",
+      "source": "1",
+      "target": "4"
+    },
+    {
+      "id": "e2-5",
+      "source": "2",
+      "target": "5"
+    },
+    {
+      "id": "e2-6",
+      "source": "2",
+      "target": "6"
+    },
+    {
+      "id": "e3-7",
+      "source": "3",
+      "target": "7"
+    },
+    {
+      "id": "e3-8",
+      "source": "3",
+      "target": "8"
+    },
+    {
+      "id": "e4-9",
+      "source": "4",
+      "target": "9"
+    },
+    {
+      "id": "e4-10",
+      "source": "4",
+      "target": "10"
+    }
+  ]
+}

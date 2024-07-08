@@ -1,0 +1,36 @@
+.custom-node {
+    border:"1px solid black";
+    border-radius:17px;
+    background: white;
+    cursor:pointer;
+    
+    /* padding:5px */
+ 
+}
+.custom-node-content{
+display: flex;
+/* justify-content: space-between; */
+justify-content: center;
+ 
+ }
+ .custom-node-label{    
+   padding-top: 9px;
+ }
+ .custom-node-toggle{
+    font-size:15px;
+ }
+ 
+ .addicon-div{
+   cursor:pointer;
+   padding-top: 10px;
+   margin-left:-2px;
+ 
+ }
+ .maincontainer{
+   display:flex;
+ 
+ }
+ .selected{
+  background-color: transparent !important;
+  width: inherit !important;
+}

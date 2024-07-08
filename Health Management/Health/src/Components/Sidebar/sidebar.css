@@ -1,0 +1,43 @@
+.sidebar-List {
+    padding-top: 67px !important;
+    padding-bottom: 20px !important;
+}
+
+.makeStyles-drawerPaper-3{
+    width: 128px !important;
+}
+
+.MuiListItem-root{
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+}
+
+.MuiTypography-displayBlock{
+    text-wrap: nowrap !important;
+}
+
+.makeStyles-drawer-2{
+    width: 125px !important;
+}
+
+.button-link{
+/* background-color: black !important; */
+color: black;
+/* text-underline-offset: none; */
+text-decoration: none;
+font-size: 16px;
+/* border: none;
+border-radius: 5px;
+cursor: pointer; */ 
+}
+
+.selected{
+    border-radius: 12px !important;
+    width: 120px !important;
+    background-color:#ff0000a6 !important;
+}
+/* ListItemText{
+    font-size:16px !important;
+    line-height: 1 !important;
+    text-align: center !important;
+} */

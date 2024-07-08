@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  font-size: 3rem;
+  margin: auto;
+  background-color: rgb(197, 211, 211);
+ 
+  /* max-width: 800px;
+  margin-top: 20px; */
+  
+}
+.css-bz5ng3-MuiInputBase-root-MuiInput-root::before{
+  content:none !important;
+}
+.css-bz5ng3-MuiInputBase-root-MuiInput-root::after{
+  content:none !important;
+}
+.css-1rqoqxy::before {
+  border-bottom: none !important;
+}
+.css-1rqoqxy::after {
+  border-bottom: none !important;
+
+}
