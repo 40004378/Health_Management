@@ -11,7 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Input from '@mui/material/Input';
 import InputAdornment from '@mui/material/InputAdornment';
 import { Card, CardContent, CardMedia, Grid } from "@material-ui/core";
-import SearchIcon from '@mui/icons-material/Search'; 
+import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
 import '../../index.css';
 const ToolsCatalog = () => {
@@ -26,15 +26,9 @@ const ToolsCatalog = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
+  const [anchorEl, setAnchorEl] = useState(null);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   axios.get("http://localhost:8000/GetToolList").then((response) => {
-  //     setCardSlice(response?.data);
-  //     setFilteredTools(response?.data);
-  //     updateCategoryCount(response?.data);
-  //   });
-  // }, []);
   useEffect(() => {
     axios.get("http://localhost:7074/api/tool-monitoring/api/v1/Tools").then((response) => {
       setCardSlice(response?.data);
@@ -48,6 +42,17 @@ const ToolsCatalog = () => {
       setRegionData(response?.data);
     });
   }, []);
+  const fetchFilteredTools = (search) => {
+    axios.get(`http://localhost:7074/api/tool-monitoring/api/v1/Tools?search=${search}`).then((response) => {
+          setFilteredTools(response?.data);
+        });
+      };
+     
+      useEffect(() => {
+        if (searchTerm) {
+          fetchFilteredTools(searchTerm);
+        }
+      }, [searchTerm]);
   
 
   //added 2 new 
@@ -69,12 +74,9 @@ const ToolsCatalog = () => {
       }))
     );
   };
-  //added new
   
-  //added new
   const filterTools = () => {
     let filtered = cardSlice;
-
     if (searchTerm) {
       filtered = filtered.filter((tool) =>
         tool.toolName.toLowerCase().includes(searchTerm.toLowerCase())
@@ -83,22 +85,21 @@ const ToolsCatalog = () => {
     if (selectedCategory && selectedCategory !== "All") {
       filtered = filtered.filter((tool) => tool.toolCategoryName === selectedCategory);
     }
-    if(selectedRegion && selectedRegion !== "All"){
+    if (selectedRegion && selectedRegion !== "All") {
       filtered = filtered.filter((tool) => tool.regionName === selectedRegion)
-      //vidi code
-      console.log("vidi",filtered.filter((tool) => tool.regionName === selectedRegion));
       updateCategoryCount(cardSlice.filter((tool) => tool.regionName === selectedRegion));
     }
-    if(selectedRegion === "All"){
+    if (selectedRegion === "All") {
       updateCategoryCount(cardSlice);
     }
     setFilteredTools(filtered);
-    // updateCategoryCount(filtered);
-    console.log("tools", filtered);
   };
+  
   useEffect(() => {
     filterTools();
   }, [searchTerm, selectedCategory, selectedRegion, cardSlice]);
+
+
 
   const handleSearch = (e) => {
     const currentTool = e.target.value;
@@ -120,17 +121,15 @@ const ToolsCatalog = () => {
     setSearchTerm(suggestion.toolName);
         setFilteredSuggestions([]);
       };
+
   const showToolDetails = (tool) => {
     setIsClicked(true);
     setSelectedTool(tool);
     navigate('/tool-details/',{state: { tool }})
-   
   };
+
   const handleCategoryClick = (toolCategoryName) => {
-    
     setSelectedCategory(toolCategoryName);
-    
-    // setColor('lightgrey'); 
   };
   const handleChange = (event) => {
     setSelectedRegion(event.target.value);
@@ -166,8 +165,10 @@ console.log("vik", selectedTool);
                 </InputAdornment>
               }
             />
+            </div>
+            <div>
             {filteredSuggestions.length > 0 && dropdownVisible &&(
-                    <div className="dropdown-menu-data">
+                    <div className="dropdown-menu">
                         {filteredSuggestions.map((tool, index) => (
                             <div
                                 key={index}
@@ -179,11 +180,10 @@ console.log("vik", selectedTool);
                         ))}
                     </div>
                 )}
-
-
           </div>
+         
           </div>
-          <div>
+         
           <div className="tabs-and-dropdown">
             <div className="tabs">
               {toolCategoryCount.map((CategoryCount) => (
@@ -198,9 +198,11 @@ console.log("vik", selectedTool);
                 </button>
               ))}
             </div>
-            
+            </div>
 
-<div className="dropdown">
+
+
+            <div className="dropdown">
               <div className="dropregion">
                 <div className="region-text">
                   <InputLabel sx={{fontWeight:"bold"}}>Region</InputLabel>
@@ -253,8 +255,8 @@ console.log("vik", selectedTool);
                 </FormControl>
               </div>
             </div>
-          </div>
-          </div>
+         
+       
 
           <div>
           <div className="card-container">
@@ -276,9 +278,6 @@ console.log("vik", selectedTool);
           boxShadow: 'none'
         }}
         onClick={() => showToolDetails(card)}
-//                   style={{ transition: 'transform 0.2s', borderBlock: 'none' }}
-// onMouseEnter={(e) => e.currentTarget.style.borderBlock= '3px solid rgb(137, 162, 247)'}
-// onMouseLeave={(e) => e.currentTarget.style.borderBlock = 'none'}
       >
         <CardMedia                    
           alt="Card Image"
@@ -301,44 +300,10 @@ console.log("vik", selectedTool);
 </div>
 
 
-      
-          {/* <div className="card-container">
-          
-            <div className="row1">
-             
-              {filteredTools.map((card) => (
-               
-                <div className="main-card-div" key={card.id} >
-                  <div className="card"  onClick={() => showToolDetails(card)}>
-                    <img
-                      src={card.base64ToolImage}
-                      alt="Card Image"  
-                    />
-                    <img
-                      src={`data:image/jpeg;base64, ${card.base64ToolImage}`}
-                      alt="Card Image"
-                    />
-                    <div className="card-data">
-                      <p>Tool name | number:<span style={{ fontWeight: "bold",color:"black"}}>
-                        {card.toolName}</span></p>
-                      <p>
-                        Category:{" "}
-                        <span style={{ fontWeight: "bold",color:"black"}}>{card.toolCategoryName}</span>
-                      </p>
-                      <p>What part produce: <span style={{ fontWeight: "bold",color:"black"}}>
-                        {card.partsProduce}</span></p>
-                      <p>Expected useful life:<span style={{ fontWeight: "bold",color:"black"}}> 
-                      {card.expectedUsefulLife}</span></p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-               
-            </div>
-          </div> */}
+  
         </div>
       )}
     </div>
   );
-}; hello
+};
 export default ToolsCatalog;
