@@ -17,7 +17,7 @@
         
     }
     .search-container {
-        transform: translate(80%, -32%);
+        transform: translate(66%, -32%);
         display: inline-flex;
         position: absolute;
         margin-top: 35px;
@@ -38,16 +38,14 @@
         align-content: center;
  
         /* No need for position:absolute here since .search-container is already fixed */
-      }
-     
+      }     
     .searchicon{
     position: absolute;
         left: 440px;
         margin-top: 8px;
         display: flex;
         transform: translateY(-50%);
-    }
-     
+    }    
     .tabs-and-dropdown {
         display: inline-flex;
         align-items: center;
@@ -55,13 +53,13 @@
         margin-top: 6%;
         margin-left: 110px;
         position: absolute;
+      
     }
        .gridStyle {
         margin-left: 99px;
         margin-top: 20px;
        
-       }
-      
+       }     
        .tabs {
         display: flex;
         text-wrap: nowrap;
@@ -85,13 +83,15 @@
         width: 118px;
         font-size: 14px;
      
-       }
-     
+       }    
        .dropdown{
-        /* align-content: flex-end; */
-        margin-left: 112px;
-       }
-     
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 6%;
+        margin-right: 6%;
+        /* margin-left: 112px; */
+        /* position:absolute; */
+       }    
        .dropregion{
         display: flex;
         margin-left: -95px;
@@ -102,7 +102,7 @@
      
        .card-container {
         /* display: flex; */
-        margin-top: 150px;
+        margin-top: 28px;
         margin-left: 99px;
      
        }
@@ -115,7 +115,6 @@
         transition: transform 0.3s;
         margin: 15px;
         border: 2px solid white;
-
     
        }     
        .card-img {
@@ -128,29 +127,28 @@
         padding: 7px;
         font-size: 13px;
         color: #8f8fa0;
-       }
-     
+       }     
        .p{
         padding-bottom: 6px;
         font-size: 16px !important;
-       }
-     
+       }     
        .row1{
         display: flex;
         flex-wrap: wrap;
         margin-left: 15px;
-       }
-     
+       }     
        .dropdown-menu {
-        position: absolute;
-        top: 175px;
-        width: 618px;
-        left: 348px;
-        right: 0;
-        background: rgb(165, 158, 158);
+         position: absolute;
+         /* display:inline-flex; */
+       
+         margin-top: 62px;
+         width: 595px;
+         margin-left: 28%;
+      
+         background: rgba(248, 248, 248, 0.904);
         border: 1px solid #ddd;
         max-height: 200px;
-        overflow-y: auto;
+        overflow-y: auto !important;
         z-index: 10;
         border-radius: 14px;
        }
